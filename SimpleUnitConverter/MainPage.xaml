@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimpleUnitConverter.MainPage">
+
+    <StackLayout Padding="20, 50, 20, 50"
+                 BackgroundColor="DimGray"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center"
+                 WidthRequest="500"
+                 HeightRequest="500">
+        <Frame BackgroundColor="Grey"
+               BorderColor="LightGray"
+               WidthRequest="340"
+               Margin="10">
+            <Picker x:Name="unitTypePicker"
+                    Title="Select Unit Conversion Type"
+                    TitleColor="White"
+                    WidthRequest="300"
+                    TextColor="White">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Area</x:String>
+                        <x:String>Length</x:String>
+                        <x:String>Speed</x:String>
+                        <x:String>Temperature</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </Frame>
+
+        <HorizontalStackLayout Padding="5"
+                               Spacing="10"
+                               HorizontalOptions="CenterAndExpand">
+                <!-- Convert-From Box -->
+                <Frame BackgroundColor="Grey"
+                       BorderColor="LightGray"
+                       Padding="0"
+                       Margin="0">
+                <StackLayout WidthRequest="150"
+                             Padding="10"
+                             Margin="8"
+                             Spacing="10">
+                    <Picker x:Name="unitFromPicker"
+                            Title="Convert From"
+                            TitleColor="White">
+                    </Picker>
+
+                    <Entry x:Name="valueEntry1"
+                           Placeholder="X"
+                           TextColor="White"
+                           FontSize="18"
+                           Keyboard="Numeric" />
+                </StackLayout>
+            </Frame>    
+
+            <Label Text="="
+                   TextColor="Black"
+                   FontSize="30"
+                   Padding="10, 50, 10, 10"/>
+            
+            <!-- Convert-To Box -->
+            <Frame BackgroundColor="Grey"
+                   BorderColor="LightGray"
+                   Padding="0"
+                   Margin="0">
+                <StackLayout BackgroundColor="Grey"
+                             WidthRequest="150"
+                             Padding="10"
+                             Margin="8"
+                             Spacing="10">
+                    <Picker x:Name="unitToPicker"
+                            Title="Convert To"
+                            TitleColor="White">
+                    </Picker>
+
+                    <Entry x:Name="valueEntry2"
+                           TextColor="White"
+                           FontSize="18"
+                           Placeholder="Y"
+                           Keyboard="Numeric" />
+                </StackLayout>
+            </Frame>
+        </HorizontalStackLayout>
+
+        <Button Text="Swap Conversion"
+                TextColor="White"
+                BackgroundColor="SlateGray"
+                WidthRequest="200"
+                CornerRadius="20"
+                BorderColor="LightGray"
+                BorderWidth="1"
+                Margin="30"/>
+    </StackLayout>
+</ContentPage>
