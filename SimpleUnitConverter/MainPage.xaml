@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:SimpleUnitConverter"
              x:Class="SimpleUnitConverter.MainPage">
 
     <StackLayout Padding="20, 50, 20, 50"
@@ -16,24 +17,18 @@
             <Picker x:Name="unitTypePicker"
                     Title="Select Unit Conversion Type"
                     TitleColor="White"
+                    TextColor="White"
                     WidthRequest="300"
-                    TextColor="White">
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Area</x:String>
-                        <x:String>Length</x:String>
-                        <x:String>Speed</x:String>
-                        <x:String>Temperature</x:String>
-                    </x:Array>
-                </Picker.ItemsSource>
+                    ItemDisplayBinding="{Binding Name}"
+                    SelectedIndexChanged="unitTypePicker_SelectedIndexChanged">
             </Picker>
         </Frame>
 
         <HorizontalStackLayout Padding="5"
                                Spacing="10"
                                HorizontalOptions="CenterAndExpand">
-                <!-- Convert-From Box -->
-                <Frame BackgroundColor="Grey"
+            <!-- Convert-From Box -->
+            <Frame BackgroundColor="Grey"
                        BorderColor="LightGray"
                        Padding="0"
                        Margin="0">
@@ -43,22 +38,25 @@
                              Spacing="10">
                     <Picker x:Name="unitFromPicker"
                             Title="Convert From"
-                            TitleColor="White">
+                            TitleColor="White"
+                            SelectedIndexChanged="unitFromPicker_SelectedIndexChanged">
                     </Picker>
 
-                    <Entry x:Name="valueEntry1"
+                    <Entry x:Name="valueEntryFrom"
                            Placeholder="X"
                            TextColor="White"
                            FontSize="18"
-                           Keyboard="Numeric" />
+                           Keyboard="Numeric"
+                           TextChanged="valueEntryFrom_TextChanged"
+                           />
                 </StackLayout>
-            </Frame>    
+            </Frame>
 
             <Label Text="="
                    TextColor="Black"
                    FontSize="30"
                    Padding="10, 50, 10, 10"/>
-            
+
             <!-- Convert-To Box -->
             <Frame BackgroundColor="Grey"
                    BorderColor="LightGray"
@@ -71,25 +69,18 @@
                              Spacing="10">
                     <Picker x:Name="unitToPicker"
                             Title="Convert To"
-                            TitleColor="White">
+                            TitleColor="White"
+                            SelectedIndexChanged="unitToPicker_SelectedIndexChanged">
                     </Picker>
 
-                    <Entry x:Name="valueEntry2"
+                    <Entry x:Name="valueEntryTo"
                            TextColor="White"
                            FontSize="18"
                            Placeholder="Y"
-                           Keyboard="Numeric" />
+                           Keyboard="Numeric"
+                           TextChanged="valueEntryTo_TextChanged"/>
                 </StackLayout>
             </Frame>
         </HorizontalStackLayout>
-
-        <Button Text="Swap Conversion"
-                TextColor="White"
-                BackgroundColor="SlateGray"
-                WidthRequest="200"
-                CornerRadius="20"
-                BorderColor="LightGray"
-                BorderWidth="1"
-                Margin="30"/>
     </StackLayout>
 </ContentPage>

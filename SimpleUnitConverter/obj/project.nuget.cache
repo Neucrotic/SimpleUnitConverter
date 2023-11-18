@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "tHKe+qO5qQEaEUmN9vVvvlxiiW4L0OIcofzNtO7k/leeocivTrnVykK0+GkLj+2vjaz9bpOd6DOKT0k4S/dBKA==",
+  "dgSpecHash": "rd0F74Cn8+vd3e6eDufClw13+A1NymFZxRBOqmtOf+37nHMNKHn8C6/ag8kk2VUjSeCOXcAK3ucYhSgUXawUkA==",
   "success": true,
   "projectFilePath": "C:\\_MAUI Projects\\SimpleUnitConverter\\SimpleUnitConverter\\SimpleUnitConverter.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\nelso\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.2\\communitytoolkit.mvvm.8.2.2.nupkg.sha512",
     "C:\\Users\\nelso\\.nuget\\packages\\googlegson\\2.9.1.1\\googlegson.2.9.1.1.nupkg.sha512",
     "C:\\Users\\nelso\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\nelso\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",

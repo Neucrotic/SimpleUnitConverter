@@ -1,1 +1,0 @@
-C:\_MAUI Projects\SimpleUnitConverter\SimpleUnitConverter\SimpleUnitConverter.csproj;x64
