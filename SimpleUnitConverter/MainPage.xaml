@@ -4,12 +4,13 @@
              xmlns:model="clr-namespace:SimpleUnitConverter"
              x:Class="SimpleUnitConverter.MainPage">
 
-    <StackLayout Padding="20, 50, 20, 50"
+    <StackLayout Padding="20, 20, 20, 20"
                  BackgroundColor="DimGray"
                  HorizontalOptions="Center"
                  VerticalOptions="Center"
                  WidthRequest="500"
-                 HeightRequest="500">
+                 HeightRequest="500"
+                 Spacing="20">
         <Frame BackgroundColor="Grey"
                BorderColor="LightGray"
                WidthRequest="340"
@@ -20,67 +21,65 @@
                     TextColor="White"
                     WidthRequest="300"
                     ItemDisplayBinding="{Binding Name}"
-                    SelectedIndexChanged="unitTypePicker_SelectedIndexChanged">
+                    SelectedIndexChanged="Picker_OnUnitChanged">
             </Picker>
         </Frame>
 
-        <HorizontalStackLayout Padding="5"
-                               Spacing="10"
-                               HorizontalOptions="CenterAndExpand">
-            <!-- Convert-From Box -->
-            <Frame BackgroundColor="Grey"
-                       BorderColor="LightGray"
-                       Padding="0"
-                       Margin="0">
-                <StackLayout WidthRequest="150"
-                             Padding="10"
-                             Margin="8"
-                             Spacing="10">
+        <Frame BackgroundColor="Grey"
+               BorderColor="LightGray"
+               Padding="0"
+               WidthRequest="340"
+               Margin="10">
+            <VerticalStackLayout WidthRequest="250"
+                                 Padding="10"
+                                 Margin="10"
+                                 Spacing="10">
+                <HorizontalStackLayout Padding="5"
+                                       Spacing="10"
+                                       WidthRequest="250">
                     <Picker x:Name="unitFromPicker"
                             Title="Convert From"
                             TitleColor="White"
-                            SelectedIndexChanged="unitFromPicker_SelectedIndexChanged">
+                            SelectedIndexChanged="Picker_OnFromChanged">
                     </Picker>
-
-                    <Entry x:Name="valueEntryFrom"
-                           Placeholder="X"
-                           TextColor="White"
-                           FontSize="18"
-                           Keyboard="Numeric"
-                           TextChanged="valueEntryFrom_TextChanged"
-                           />
-                </StackLayout>
-            </Frame>
-
-            <Label Text="="
-                   TextColor="Black"
-                   FontSize="30"
-                   Padding="10, 50, 10, 10"/>
-
-            <!-- Convert-To Box -->
-            <Frame BackgroundColor="Grey"
-                   BorderColor="LightGray"
-                   Padding="0"
-                   Margin="0">
-                <StackLayout BackgroundColor="Grey"
-                             WidthRequest="150"
-                             Padding="10"
-                             Margin="8"
-                             Spacing="10">
+                    
                     <Picker x:Name="unitToPicker"
                             Title="Convert To"
                             TitleColor="White"
-                            SelectedIndexChanged="unitToPicker_SelectedIndexChanged">
+                            SelectedIndexChanged="Picker_OnToChanged">
                     </Picker>
+                </HorizontalStackLayout>
+                
+                <Entry x:Name="valueInput"
+                       Placeholder="X"
+                       TextColor="White"
+                       FontSize="18"
+                       Keyboard="Numeric"
+                       TextChanged="Entry_OnValueInput"/>
+                
+                <Button Text="Swap Conversion"
+                        TextColor="White"
+                        WidthRequest="150"
+                        BackgroundColor="SlateGray"
+                        BorderColor="White"
+                        BorderWidth="1"
+                        IsEnabled="True"
+                        Clicked="Button_OnSwapConversion">
+                </Button>
+            </VerticalStackLayout>
+        </Frame>
 
-                    <Entry x:Name="valueEntryTo"
-                           TextColor="White"
-                           FontSize="18"
-                           Placeholder="Y"
-                           Keyboard="Numeric"
-                           TextChanged="valueEntryTo_TextChanged"/>
-                </StackLayout>
-            </Frame>
-        </HorizontalStackLayout>
+        <Frame BackgroundColor="Grey"
+               BorderColor="LightGray"
+               Padding="10"
+               Margin="0"
+               WidthRequest="180">
+            <Label x:Name="resultLabel"
+                   TextColor="Black"
+                   HorizontalTextAlignment="Center"
+                   FontSize="30"
+                   Padding="0"
+                   />
+        </Frame>
     </StackLayout>
 </ContentPage>

@@ -6,6 +6,7 @@ C:\_MAUI Projects\SimpleUnitConverter\SimpleUnitConverter\bin\Debug\net7.0-windo
 C:\_MAUI Projects\SimpleUnitConverter\SimpleUnitConverter\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SimpleUnitConverter.pdb
 C:\_MAUI Projects\SimpleUnitConverter\SimpleUnitConverter\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri
 C:\_MAUI Projects\SimpleUnitConverter\SimpleUnitConverter\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml
+C:\_MAUI Projects\SimpleUnitConverter\SimpleUnitConverter\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Mvvm.dll
 C:\_MAUI Projects\SimpleUnitConverter\SimpleUnitConverter\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.dll
 C:\_MAUI Projects\SimpleUnitConverter\SimpleUnitConverter\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\_MAUI Projects\SimpleUnitConverter\SimpleUnitConverter\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.DependencyInjection.dll
